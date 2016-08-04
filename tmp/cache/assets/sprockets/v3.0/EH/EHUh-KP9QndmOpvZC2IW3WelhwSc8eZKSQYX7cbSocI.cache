@@ -1,0 +1,7 @@
+I"’(function() {
+  $(document).on("click", ".edit_link", function() {
+    return $(this).siblings('.edit_form').slideToggle();
+  });
+
+}).call(this);
+:ET

@@ -1,0 +1,16 @@
+<!-- Acts as the user's feed -->
+
+<div class="row">
+  <aside class="col-md-4">
+    <%= render 'shared/user_info', user: current_user %>
+  </aside>
+  <div class="col-md-8">
+    <% if current_user.timeline.any? %>
+      <h3>Your Timeline</h3>
+      <ol class="posts">
+        <%= render @posts %>
+      </ol>
+      <%= will_paginate @posts %>
+    <% end %>
+  </div>
+</div>
